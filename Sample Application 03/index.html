@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+</head>
+<body>
+    <div class='liveExample'> 
+        <form data-bind="submit: addItem">
+            New item:
+            <input data-bind='value: itemToAdd, valueUpdate: "afterkeydown"' />
+            <button type="submit" data-bind="enable: itemToAdd().length > 0">Add</button>
+            <p>Your items:</p>
+            <select multiple="multiple" width="50" data-bind="options: items"> </select>
+        </form>
+        <!-- <p>This is my new text: <span data-bind="text: myText"></span></p>
+        <button type="submit" data-bind="click: changeText ">Submit</button>
+        </div> -->
+</body>
+<script type="text/javascript" src="./index.js"></script>
+</html>
